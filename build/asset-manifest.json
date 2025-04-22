@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/prize-calc/static/css/main.93b4ce13.css",
+    "main.js": "/prize-calc/static/js/main.c85020d5.js",
+    "index.html": "/prize-calc/index.html",
+    "main.93b4ce13.css.map": "/prize-calc/static/css/main.93b4ce13.css.map",
+    "main.c85020d5.js.map": "/prize-calc/static/js/main.c85020d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93b4ce13.css",
+    "static/js/main.c85020d5.js"
+  ]
+}
