@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/prize-calc/static/css/main.bb3dd14b.css",
-    "main.js": "/prize-calc/static/js/main.19a4ead8.js",
+    "main.js": "/prize-calc/static/js/main.ada31f0c.js",
     "index.html": "/prize-calc/index.html",
     "main.bb3dd14b.css.map": "/prize-calc/static/css/main.bb3dd14b.css.map",
-    "main.19a4ead8.js.map": "/prize-calc/static/js/main.19a4ead8.js.map"
+    "main.ada31f0c.js.map": "/prize-calc/static/js/main.ada31f0c.js.map"
   },
   "entrypoints": [
     "static/css/main.bb3dd14b.css",
-    "static/js/main.19a4ead8.js"
+    "static/js/main.ada31f0c.js"
   ]
 }
