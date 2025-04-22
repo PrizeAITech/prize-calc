@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/prize-staking-calculator/static/css/main.93b4ce13.css",
+    "main.js": "/prize-staking-calculator/static/js/main.c85020d5.js",
+    "index.html": "/prize-staking-calculator/index.html",
+    "main.93b4ce13.css.map": "/prize-staking-calculator/static/css/main.93b4ce13.css.map",
+    "main.c85020d5.js.map": "/prize-staking-calculator/static/js/main.c85020d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93b4ce13.css",
+    "static/js/main.c85020d5.js"
+  ]
+}
