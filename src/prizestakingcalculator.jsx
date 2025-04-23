@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Slider } from "@/components/ui/slider";
-import { Input } from "@/components/ui/input";
-import { CardContent } from "@/components/ui/card";
+import { Slider } from './components/ui/slider';
+import { Input } from './components/ui/input';
+import { CardContent } from './components/ui/card';
 
 export default function PrizeStakingCalculator() {
   const [totalStaked, setTotalStaked] = useState(700_000_000);
