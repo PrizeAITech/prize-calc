@@ -1,16 +1,11 @@
-import React, { useState } from "react";
-import { Slider } from "@/components/ui/slider";
-import { Input } from "@/components/ui/input";
-import { CardContent } from "@/components/ui/card";
-
 export default function PrizeStakingCalculator() {
   const [totalStaked, setTotalStaked] = useState(700_000_000);
   const [userStake, setUserStake] = useState(10000);
   const [industryPercent, setIndustryPercent] = useState(10);
 
   const INDUSTRY_TOTAL = 400_000_000_000;
-  const BUSINESS_CUT = 0.03; // 3 cents per dollar
-  const MAX_REVENUE = INDUSTRY_TOTAL * BUSINESS_CUT; // $12B
+  const BUSINESS_CUT = 0.03;
+  const MAX_REVENUE = INDUSTRY_TOTAL * BUSINESS_CUT;
 
   const revenueCaptured = (industryPercent / 100) * MAX_REVENUE;
   const userShare = userStake / totalStaked;
@@ -30,9 +25,8 @@ export default function PrizeStakingCalculator() {
           $PRIZE Staking Calculator
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left side: Inputs */}
-          <div style={{ color: '#1427B8', fontSize: '1.5rem' }}>
+        <div className="flex flex-wrap gap-8">
+          <div className="flex-1" style={{ color: '#1427B8', fontSize: '1.5rem' }}>
             <div className="space-y-8 pt-2">
               <div>
                 <label className="font-semibold">Total $PRIZE Tokens Currently Staked</label>
@@ -71,25 +65,24 @@ export default function PrizeStakingCalculator() {
             </div>
           </div>
 
-          {/* Right side: Results */}
-          <div>
+          <div className="flex-1">
             <div className="green-box">
               <div className="text-2xl font-bold text-center text-white">RESULTS</div>
               <hr className="border-white" />
               <div>
-                <strong style={{ fontSize: '1.25rem' }}>Revenue from Stake</strong>
+                <strong style={{ fontSize: '1.25rem' }}>$1</strong>
                 <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>${formatNumber(userRevenue)}</div>
                 <p className="text-sm text-white">This is the estimated revenue in USD that your staked $PRIZE tokens would generate based on the captured market share.</p>
               </div>
               <hr className="border-white" />
               <div>
-                <strong style={{ fontSize: '1.25rem' }}>APR</strong>
+                <strong style={{ fontSize: '1.25rem' }}>$1</strong>
                 <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>{formatNumber(apr)}%</div>
                 <p className="text-sm text-white">This is your projected return on staked tokens as a percentage, calculated annually.</p>
               </div>
               <hr className="border-white" />
               <div>
-                <strong style={{ fontSize: '1.25rem' }}>Token Price at 20% APR</strong>
+                <strong style={{ fontSize: '1.25rem' }}>$1</strong>
                 <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>${formatNumber(tokenPriceFor20APR)}</div>
                 <p className="text-sm text-white">This is the estimated value of a single $PRIZE token assuming every staked token earns 20% APR under the current revenue capture scenario.</p>
               </div>

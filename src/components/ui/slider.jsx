@@ -1,19 +1,15 @@
 import React from 'react';
 
-export const Slider = ({ min, max, step, value, onValueChange }) => {
-  const handleChange = (e) => {
-    onValueChange([Number(e.target.value)]);
-  };
-
+export function Slider({ min, max, step, value, onValueChange }) {
   return (
     <input
       type="range"
       min={min}
       max={max}
       step={step}
-      value={value[0]}
-      onChange={handleChange}
-      className="w-full"
+      value={value}
+      onChange={(e) => onValueChange([parseInt(e.target.value)])}
+      className="slider"
     />
   );
-};
+}

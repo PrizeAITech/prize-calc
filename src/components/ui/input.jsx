@@ -1,12 +1,13 @@
 import React from 'react';
 
-export const Input = ({ type = "text", value, onChange, className }) => {
+export function Input({ type, value, onChange, style, className }) {
   return (
     <input
       type={type}
       value={value}
       onChange={onChange}
-      className={`w-full px-3 py-2 rounded-md border border-gray-300 ${className}`}
+      style={style}
+      className={className}
     />
   );
-};
+}
