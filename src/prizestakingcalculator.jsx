@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { Slider } from "@/components/ui/slider";
+import { Input } from "@/components/ui/input";
+import { CardContent } from "@/components/ui/card";
 
 export default function PrizeStakingCalculator() {
   const [totalStaked, setTotalStaked] = useState(700_000_000);
-  const [userStake, setUserStake] = useState(10_000);
+  const [userStake, setUserStake] = useState(10000);
   const [industryPercent, setIndustryPercent] = useState(10);
 
   const INDUSTRY_TOTAL = 400_000_000_000;
@@ -28,11 +31,12 @@ export default function PrizeStakingCalculator() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left side: Inputs */}
           <div style={{ color: '#1427B8', fontSize: '1.5rem' }}>
             <div className="space-y-8 pt-2">
               <div>
                 <label className="font-semibold">Total $PRIZE Tokens Currently Staked</label>
-                <input
+                <Input
                   className="text-black mt-1"
                   style={{ fontSize: '1.4rem' }}
                   type="text"
@@ -43,7 +47,7 @@ export default function PrizeStakingCalculator() {
               </div>
               <div>
                 <label className="font-semibold">Your $PRIZE Stake</label>
-                <input
+                <Input
                   className="text-black mt-1"
                   style={{ fontSize: '1.4rem' }}
                   type="text"
@@ -54,14 +58,12 @@ export default function PrizeStakingCalculator() {
               </div>
               <div>
                 <label className="font-semibold">Industry Revenue Capture (% of $400B)</label>
-                <input
-                  className="slider"
-                  type="range"
-                  min="2"
-                  max="100"
-                  step="1"
-                  value={industryPercent}
-                  onChange={(e) => setIndustryPercent(Number(e.target.value))}
+                <Slider
+                  min={2}
+                  max={100}
+                  step={1}
+                  value={[industryPercent]}
+                  onValueChange={(val) => setIndustryPercent(val[0])}
                 />
                 <div className="mt-2">{industryPercent}%</div>
                 <p className="text-sm mt-1">Adjust the slider to estimate what portion of the $400 billion annually revenue the arcade, vending, and gaming industry the business captures.</p>
@@ -69,24 +71,25 @@ export default function PrizeStakingCalculator() {
             </div>
           </div>
 
+          {/* Right side: Results */}
           <div>
             <div className="green-box">
               <div className="text-2xl font-bold text-center text-white">RESULTS</div>
               <hr className="border-white" />
               <div>
-                <strong style={{ fontSize: '1.25rem' }}>$1</strong>
+                <strong style={{ fontSize: '1.25rem' }}>Revenue from Stake</strong>
                 <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>${formatNumber(userRevenue)}</div>
                 <p className="text-sm text-white">This is the estimated revenue in USD that your staked $PRIZE tokens would generate based on the captured market share.</p>
               </div>
               <hr className="border-white" />
               <div>
-                <strong style={{ fontSize: '1.25rem' }}>$1</strong>
+                <strong style={{ fontSize: '1.25rem' }}>APR</strong>
                 <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>{formatNumber(apr)}%</div>
                 <p className="text-sm text-white">This is your projected return on staked tokens as a percentage, calculated annually.</p>
               </div>
               <hr className="border-white" />
               <div>
-                <strong style={{ fontSize: '1.25rem' }}>$1</strong>
+                <strong style={{ fontSize: '1.25rem' }}>Token Price at 20% APR</strong>
                 <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>${formatNumber(tokenPriceFor20APR)}</div>
                 <p className="text-sm text-white">This is the estimated value of a single $PRIZE token assuming every staked token earns 20% APR under the current revenue capture scenario.</p>
               </div>
