@@ -1,7 +1,44 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap'); */
-
+/* General styles */
 body {
- body {
   font-family: 'Chelsea Market', cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
 }
+
+/* Style for the yellow box (main box) */
+.yellow-box {
+  background-color: #FFD700; /* Yellow color */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
+
+/* Green box for results */
+.green-box {
+  background-color: #28a745;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Rounded corners for the whole calculator */
+.container {
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+}
+
+/* Input and button styling */
+.input-box,
+.button {
+  border-radius: 8px;
+}
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
+
