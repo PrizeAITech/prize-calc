@@ -2,7 +2,7 @@
   "name": "prize-staking-calculator",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://prizeaitech.github.io/prize-calc/",
+  "homepage": "https://prize-calc-3jvmdr0d3-jasons-projects-78b03ad3.vercel.app",
   "dependencies": {
     "@craco/craco": "^7.0.0",
     "react": "^18.2.0",
