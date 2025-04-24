@@ -1,24 +1,50 @@
 body {
   font-family: 'Chelsea Market', cursive;
-  margin: 40;
-  padding: 40;
+  margin: 20;
+  padding: 0;
   background-color: #f8f8f8;
 }
 
+/* Yellow box */
 .yellow-box {
-  background-color: #ffd700;
+  background-color: #FFF031;
   border-radius: 20px;
-  padding: 80px;
+  border: 2px solid white;
+  padding: 20px;
+  padding-left: 0;  /* Remove padding on the left */
+  padding-right: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0; /* Allow grey box to sit at the top of the yellow box */
 }
 
+.yellow-box .space-y-8 > div:first-child {
+  margin-top: 20px;
+}
+
+.heading-box {
+  background-color: #454545;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.6rem;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  border: 2px solid white;
+  width: 100%;
+}
+
+/* Green box for results */
 .green-box {
-  background-color: #28a745;
+  background-color: #57B42D;
   color: white;
   padding: 20px;
   border-radius: 10px;
+  border: 2px solid white; /* White border around the green box */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 20px; /* Adds space between the green box and right edge of the yellow box */
 }
 
 .container {
@@ -35,3 +61,38 @@ body {
 .text-center {
   text-align: center;
 }
+
+.grid-cols-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-cols-1 .green-box {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.yellow-box p {
+  font-size: 1.2rem;
+  color: black;
+}
+/* Blue Button Styles */
+.button {
+  background-color: #1427B8;  /* Blue background */
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #4682b4;  /* Darker blue when hovered */
+}
+
+.button:focus {
+  outline: none; /* Remove outline on focus */
+}
+
