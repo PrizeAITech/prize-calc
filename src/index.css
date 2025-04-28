@@ -20,10 +20,6 @@ body {
   padding-top: 0; /* Allow grey box to sit at the top of the yellow box */
 }
 
-.yellow-box .space-y-8 > div:first-child {
-  margin-top: 20px;
-}
-
 /* Heading box */
 .heading-box {
   background-color: #454545;
@@ -102,20 +98,24 @@ body {
 .button:focus {
   outline: none; /* Remove outline on focus */
 }
+
 .divider {
   border-bottom: 2px solid white;
   margin: 10px 0;
 }
+
 /* Ensure the slider takes up the same width as the input fields */
 .green-box .slider {
   width: 100%; /* This will make the slider take the full width of its container */
   height: 8px; /* Adjust slider height if necessary */
 }
+
 /* Green box divider */
 .green-box hr {
   border: 1px solid white;
   margin: 20px 0; /* Adjust the spacing between the dividers */
 }
+
 @keyframes wiggle {
   0% { transform: translateX(0); }
   25% { transform: translateX(-3px); }
@@ -143,6 +143,61 @@ body {
 .button:focus {
   outline: none; /* Remove outline on focus */
 }
+
 .large-label {
   font-size: 1.8rem; /* You can adjust the size here */
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .yellow-box {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  /* Make the green boxes stack vertically on small screens */
+  .grid-cols-1 {
+    flex-direction: column;
+  }
+
+  .green-box {
+    margin-right: 0;
+    margin-bottom: 20px; /* Adds space between the green boxes */
+  }
+
+  /* Adjust font sizes for smaller screens */
+  .green-box p {
+    font-size: 0.9rem; /* Smaller font for mobile */
+  }
+
+  .heading-box h1 {
+    font-size: 1.5rem; /* Smaller heading for mobile */
+  }
+
+  /* Adjust the blue button */
+  .button {
+    width: 100%; /* Make the button take the full width */
+    padding: 15px 0;
+  }
+
+  /* Adjust other text elements */
+  .text-sm {
+    font-size: 0.8rem; /* Smaller text for mobile */
+  }
+
+  /* Adjust slider for mobile */
+  .slider {
+    width: 100% !important; /* Make the slider take up full width */
+  }
+
+  /* Adjust input fields */
+  .input-box input {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  /* Adjust divider line */
+  .divider {
+    margin: 5px 0;
+  }
+}
+
