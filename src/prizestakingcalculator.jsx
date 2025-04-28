@@ -110,19 +110,19 @@ export default function PrizeStakingCalculator() {
             <div>
               <strong style={{ fontSize: '1.5rem' }}>Staking Revenue (USD):</strong>
               <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>${formatNumber(userRevenue)}</div>
-              <p className="text-sm text-white">This is the estimated revenue in USD that your staked $PRIZE tokens would generate based on the captured market share.</p>
+              <p className="text-sm text-white" style={{ fontSize: '0.9rem' }}>This is the estimated revenue in USD that your staked $PRIZE tokens would generate based on the captured market share.</p>
             </div>
             <hr className="border-white" />
             <div>
               <strong style={{ fontSize: '1.5rem' }}>APR (Annual Percentage Return):</strong>
               <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>{formatNumber(apr)}%</div>
-              <p className="text-sm text-white">This is your projected return on staked tokens as a percentage, calculated annually.</p>
+              <p className="text-sm text-white" style={{ fontSize: '0.9rem' }}>This is your projected return on staked tokens as a percentage, calculated annually.</p>
             </div>
             <hr className="border-white" />
             <div>
               <strong style={{ fontSize: '1.5rem' }}>Predicted Token Price @ 20% APR:</strong>
               <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>${formatNumber(tokenPriceFor20APR)}</div>
-              <p className="text-sm text-white">This is the estimated value of a single $PRIZE token assuming every staked token earns 20% APR under the current revenue capture scenario.</p>
+              <p className="text-sm text-white" style={{ fontSize: '0.9rem' }}>This is the estimated value of a single $PRIZE token assuming every staked token earns 20% APR under the current revenue capture scenario.</p>
             </div>
 
             {/* Blue Button for More Details */}
