@@ -2,7 +2,7 @@ body {
   font-family: 'Chelsea Market', cursive;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background-color: #000000;
   overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
@@ -210,3 +210,18 @@ body {
     margin: 5px 0;
   }
 }
+.slider-field {
+  width: 250px; /* Smaller width for desktop */
+  max-width: 100%;
+  margin-top: 8px;
+  height: 8px;
+}
+
+/* Mobile - make slider full width */
+@media (max-width: 768px) {
+  .slider-field {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
