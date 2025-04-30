@@ -224,4 +224,12 @@ body {
     max-width: 100%;
   }
 }
+@media (max-width: 768px) {
+  input,
+  .slider-field {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
 
