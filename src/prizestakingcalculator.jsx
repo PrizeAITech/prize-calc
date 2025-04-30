@@ -46,7 +46,7 @@ export default function PrizeStakingCalculator() {
 
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <label className="font-semibold text-blue-600 mb-1">Total $PRIZE Tokens Currently Staked</label>
-                  <div style={{ width: '500px' }}>
+                  <div style={{ width: '100%', maxWidth: '500px' }}>
                     <Input
                       type="text"
                       value={formatInputValue(totalStaked)}
@@ -64,7 +64,7 @@ export default function PrizeStakingCalculator() {
 
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <label className="font-semibold text-blue-600 mb-1">Your $PRIZE Stake</label>
-                  <div style={{ width: '500px' }}>
+                  <div style={{ width: '100%', maxWidth: '500px' }}>
                     <Input
                       type="text"
                       value={formatInputValue(userStake)}
@@ -84,7 +84,7 @@ export default function PrizeStakingCalculator() {
                   <label className="font-semibold text-blue-600 mb-2">
                     Industry Revenue Capture (% of $400B)
                   </label>
-                  <div style={{ width: '500px' }}>
+                  <div style={{ width: '100%', maxWidth: '500px' }}>
                     <Slider
                       min={2}
                       max={100}
