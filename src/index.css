@@ -2,8 +2,8 @@ body {
   font-family: 'Chelsea Market', cursive;
   margin: 0;
   padding: 0;
-  background-color: #000000;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  background-color: transparent;
+  overflow-x: hidden;
 }
 
 /* Yellow box */
