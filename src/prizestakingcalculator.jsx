@@ -44,7 +44,6 @@ export default function PrizeStakingCalculator() {
             <div style={{ color: '#1427B8', fontSize: '1.5rem' }}>
               <div className="space-y-8 pt-2">
 
-                {/* Total Staked */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <label className="font-semibold text-blue-600 mb-1">Total $PRIZE Tokens Currently Staked</label>
                   <div style={{ width: '500px' }}>
@@ -63,7 +62,6 @@ export default function PrizeStakingCalculator() {
 
                 <hr className="border-white" />
 
-                {/* Your Stake */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <label className="font-semibold text-blue-600 mb-1">Your $PRIZE Stake</label>
                   <div style={{ width: '500px' }}>
@@ -82,7 +80,6 @@ export default function PrizeStakingCalculator() {
 
                 <hr className="border-white" />
 
-                {/* Industry Revenue Capture */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                   <label className="font-semibold text-blue-600 mb-2">
                     Industry Revenue Capture (% of $400B)
@@ -109,7 +106,6 @@ export default function PrizeStakingCalculator() {
                   <p className="text-sm text-white mt-2" style={{ fontSize: '0.8rem' }}>
                     • All the results in the green box are based on the fee of 3 cents per dollar from that industry revenue.
                   </p>
-                  <hr className="border-white" />
                   <p className="text-sm text-white mt-2" style={{ fontSize: '0.8rem' }}>
                     • The results and figures you have placed in the white fields are all based on your speculations & the potential outcomes from Prize AI Technologies business activities.
                   </p>
@@ -119,7 +115,6 @@ export default function PrizeStakingCalculator() {
             </div>
           </div>
 
-          {/* Right Box (Results) */}
           <div className="green-box" style={{ width: '100%' }}>
             <div className="text-2xl font-bold text-center text-white" style={{ fontSize: '2.5rem' }}>RESULTS</div>
             <hr className="border-white" />
