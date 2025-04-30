@@ -23,7 +23,17 @@ export default function PrizeStakingCalculator() {
   const parseInputValue = (val) => Number(val.replace(/,/g, ""));
 
   return (
-    <div className="mx-auto p-6" style={{ maxWidth: '1200px', fontFamily: 'Chelsea Market', color: 'black' }}>
+    <div
+      className="calculator-wrapper"
+      style={{
+        margin: '0 auto',
+        padding: '1.5rem',
+        maxWidth: '1200px',
+        fontFamily: 'Chelsea Market',
+        color: 'black',
+        boxSizing: 'border-box',
+      }}
+    >
       <div className="yellow-box">
         <div className="heading-box">
           <h1>$PRIZE Staking Calculator</h1>
@@ -77,7 +87,7 @@ export default function PrizeStakingCalculator() {
                   <label className="font-semibold text-blue-600 mb-2">
                     Industry Revenue Capture (% of $400B)
                   </label>
-                  <div style={{ width: '520px' }}>
+                  <div style={{ width: '500px' }}>
                     <Slider
                       min={2}
                       max={100}
@@ -160,7 +170,6 @@ export default function PrizeStakingCalculator() {
             >
               BUY $PRIZE
             </button>
-
           </div>
         </div>
       </div>
