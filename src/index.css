@@ -267,6 +267,9 @@ body {
   border: 2px solid white;
   border-radius: 8px;
 }
-
+/* Remove any border around the overall calculator wrapper */
+.calculator-wrapper {
+  border: none !important;
+}
 
 
