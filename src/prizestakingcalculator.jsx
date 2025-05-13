@@ -31,11 +31,12 @@ export default function PrizeStakingCalculator() {
 
   // Formatting functions
   const formatNumber = (num, decimals = 2) => {
-    return num.toLocaleString(undefined, {
-      minimumFractionDigits: decimals,
-      maximumFractionDigits: decimals
-    }).replace(/,/g, ' ');
-  };
+  return num.toLocaleString(undefined, {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals
+  });
+};
+
   const formatInputValue = (num) => num.toLocaleString();
   const parseInputValue  = (val) => Number(val.replace(/,/g, ""));
 
