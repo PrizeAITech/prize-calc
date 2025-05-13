@@ -251,4 +251,9 @@ body {
     padding: 8px;
   }
 }
+/* Yellow box border styling */
+.yellow-box {
+  border: 2px solid white;
+  border-radius: 8px;
+}
 
