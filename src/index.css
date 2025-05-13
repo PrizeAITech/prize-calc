@@ -237,5 +237,18 @@ body {
   margin: 0 auto;
   text-align: left;
 }
+/* Make all inputs fill their container and respect padding */
+.yellow-box input {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
 
+/* Slightly smaller text & padding on mobile for those inputs */
+@media (max-width: 768px) {
+  .yellow-box input {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}
 
