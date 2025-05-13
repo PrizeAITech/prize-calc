@@ -267,19 +267,22 @@ body {
   border: 2px solid white;
   border-radius: 8px;
 }
-/* Remove any border around the overall calculator wrapper */
+/* Remove any border and shadow around the overall calculator wrapper */
 .calculator-wrapper {
   border: none !important;
+  box-shadow: none !important;
 }
 
-/* Ensure yellow panel has no border itself, green-box handles its own border */
+/* Ensure yellow panel has no border or shadow, green-box handles its own border */
 .yellow-box {
   border: none !important;
+  box-shadow: none !important;
 }
 
 /* White border around the yellow input panel (green-box) */
 .green-box {
   border: 2px solid white;
   border-radius: 8px;
+  box-shadow: none !important;
 }
 
