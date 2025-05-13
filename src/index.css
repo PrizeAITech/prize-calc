@@ -120,7 +120,7 @@ body {
 
 /* Green box divider */
 .green-box hr {
-  border: 1px solid white;
+  border: 2px solid white;
   margin: 20px 0; /* Adjust the spacing between the dividers */
 }
 
@@ -257,5 +257,16 @@ body {
   border-radius: 8px;
   background-color: transparent !important;
 }
+/* White border around the yellow input panel (green-box) */
+.green-box {
+  border: 2px solid white;
+  border-radius: 8px;
+}
+/* White border around the yellow input panel (green-box) */
+.green-box {
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
 
 
