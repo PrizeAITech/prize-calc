@@ -41,7 +41,8 @@ export default function PrizeStakingCalculator() {
 
   return (
     <div className="calculator-wrapper" style={{ margin: '0 auto', padding: '1.5rem', maxWidth: '1200px', fontFamily: 'Chelsea Market', color: 'black', boxSizing: 'border-box' }}>
-      <div className="yellow-box" style={{ backgroundColor: 'transparent' }}>
+      {/* Yellow panel with white border */}
+      <div className="yellow-box" style={{ padding: '1.5rem' }}>
         <div className="heading-box"><h1>$PRIZE Staking Calculator</h1></div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
@@ -53,59 +54,51 @@ export default function PrizeStakingCalculator() {
                 {/* Total Staked */}
                 <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-start' }}>
                   <label className="font-semibold text-blue-600 mb-1">Total $PRIZE Tokens Currently Staked</label>
-                  <div style={{ width:'100%', maxWidth:'500px' }}>
-                    <Input
-                      type="text"
-                      value={formatInputValue(totalStaked)}
-                      onChange={e => setTotalStaked(parseInputValue(e.target.value))}
-                      className="text-black"
-                      style={{ fontSize:'1.3rem', padding:'10px', borderRadius:'8px', width:'100%' }}
-                    />
-                  </div>
+                  <Input
+                    type="text"
+                    value={formatInputValue(totalStaked)}
+                    onChange={e => setTotalStaked(parseInputValue(e.target.value))}
+                    className="text-black"
+                    style={{ fontSize:'1.3rem', padding:'10px', borderRadius:'8px', width:'100%', boxSizing:'border-box' }}
+                  />
                 </div>
                 <hr className="border-white" />
 
                 {/* Your Stake */}
                 <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-start' }}>
                   <label className="font-semibold text-blue-600 mb-1">Your $PRIZE Stake</label>
-                  <div style={{ width:'100%', maxWidth:'500px' }}>
-                    <Input
-                      type="text"
-                      value={formatInputValue(userStake)}
-                      onChange={e => setUserStake(parseInputValue(e.target.value))}
-                      className="text-black"
-                      style={{ fontSize:'1.3rem', padding:'10px', borderRadius:'8px', width:'100%' }}
-                    />
-                  </div>
+                  <Input
+                    type="text"
+                    value={formatInputValue(userStake)}
+                    onChange={e => setUserStake(parseInputValue(e.target.value))}
+                    className="text-black"
+                    style={{ fontSize:'1.3rem', padding:'10px', borderRadius:'8px', width:'100%', boxSizing:'border-box' }}
+                  />
                 </div>
                 <hr className="border-white" />
 
                 {/* Token Price */}
                 <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-start' }}>
                   <label className="font-semibold text-blue-600 mb-1">$PRIZE Token Price (USD)</label>
-                  <div style={{ width:'100%', maxWidth:'500px' }}>
-                    <Input
-                      type="number"
-                      value={tokenPrice}
-                      onChange={e => setTokenPrice(parseFloat(e.target.value) || 0)}
-                      className="text-black"
-                      style={{ fontSize:'1.3rem', padding:'10px', borderRadius:'8px', width:'100%' }}
-                    />
-                  </div>
+                  <Input
+                    type="number"
+                    value={tokenPrice}
+                    onChange={e => setTokenPrice(parseFloat(e.target.value) || 0)}
+                    className="text-black"
+                    style={{ fontSize:'1.3rem', padding:'10px', borderRadius:'8px', width:'100%', boxSizing:'border-box' }}
+                  />
                 </div>
                 <hr className="border-white" />
 
                 {/* Industry Revenue Capture */}
                 <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-start' }}>
                   <label className="font-semibold text-blue-600 mb-2">Industry Revenue Capture (% of $400B)</label>
-                  <div style={{ width:'100%', maxWidth:'500px' }}>
-                    <Slider
-                      min={2} max={100} step={1}
-                      value={[industryPercent]}
-                      onValueChange={val => setIndustryPercent(val[0])}
-                      className="slider-field"
-                    />
-                  </div>
+                  <Slider
+                    min={2} max={100} step={1}
+                    value={[industryPercent]}
+                    onValueChange={val => setIndustryPercent(val[0])}
+                    className="slider-field"
+                  />
                   <div className="mt-2">{industryPercent}%</div>
                 </div>
 
@@ -153,7 +146,10 @@ export default function PrizeStakingCalculator() {
               </div>
             </div>
 
-            <button onClick={() => window.open('https://www.prizetech.xyz/buy-prize-ico','_blank')} className="button" style={{ padding:'12px 48px', marginTop:'auto', marginBottom:'20px' }}>
+            <button
+              onClick={() => window.open('https://www.prizetech.xyz/buy-prize-ico','_blank')}
+              className="button"
+              style={{ padding:'12px 48px', marginTop:'auto', marginBottom:'20px' }}>
               BUY $PRIZE
             </button>
           </div>
