@@ -272,4 +272,14 @@ body {
   border: none !important;
 }
 
+/* Ensure yellow panel has no border itself, green-box handles its own border */
+.yellow-box {
+  border: none !important;
+}
+
+/* White border around the yellow input panel (green-box) */
+.green-box {
+  border: 2px solid white;
+  border-radius: 8px;
+}
 
