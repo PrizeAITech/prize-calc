@@ -41,7 +41,7 @@ export default function PrizeStakingCalculator() {
 
   return (
     <div className="calculator-wrapper" style={{ margin: '0 auto', padding: '1.5rem', maxWidth: '1200px', fontFamily: 'Chelsea Market', color: 'black', boxSizing: 'border-box' }}>
-      <div style={{ backgroundColor: 'transparent' }}>
+      <div style={{ backgroundColor: 'transparent', border: '2px solid white', borderRadius: '8px' }}>
         <div className="heading-box"><h1>$PRIZE Staking Calculator</h1></div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
@@ -162,3 +162,4 @@ export default function PrizeStakingCalculator() {
     </div>
   );
 }
+
