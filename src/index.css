@@ -159,4 +159,8 @@ body {
   /* remove or override the shadow */
   box-shadow: none;
 }
+/* Kill the white border around the whole calculator */
+.calculator-wrapper .yellow-box {
+  border: none !important;
+}
 
