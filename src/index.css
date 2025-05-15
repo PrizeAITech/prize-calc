@@ -11,7 +11,7 @@ body {
 .yellow-box {
   background-color: #FFF031;
   border-radius: 20px;
-  border: 2px solid white;
+  border: 3px solid white;
   padding: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
@@ -29,7 +29,7 @@ body {
   font-size: 1.6rem;
   color: white;
   border-radius: 20px 20px 0 0;
-  border: 2px solid white;
+  border: 3px solid white;
   width: 100%;
   box-sizing: border-box;
 }
@@ -40,7 +40,7 @@ body {
   color: white;
   padding: 20px;
   border-radius: 8px;
-  border: 2px solid white;
+  border: 3px solid white;
   box-shadow: none;
   display: flex;
   flex-direction: column;
@@ -159,9 +159,4 @@ body {
   /* remove or override the shadow */
   box-shadow: none;
 }
-.yellow-box {
-  border: none !important;
-}
-.yellow-box {
-  border: none !important;
-}
+
