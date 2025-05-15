@@ -40,7 +40,7 @@ body {
   color: white;
   padding: 20px;
   border-radius: 8px;
-  border: 4px solid white;
+  border: 3px solid white;
   box-shadow: none;
   display: flex;
   flex-direction: column;
@@ -159,8 +159,10 @@ body {
   /* remove or override the shadow */
   box-shadow: none;
 }
-/* Kill the white border around the whole calculator */
-.calculator-wrapper .yellow-box {
+/* Remove any border/shadow on the wrapper only */
+.calculator-wrapper {
   border: none !important;
+  box-shadow: none !important;
 }
+
 
