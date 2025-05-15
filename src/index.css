@@ -164,5 +164,9 @@ body {
   border: none !important;
   box-shadow: none !important;
 }
+/* Remove only the outer wrapper border */
+.yellow-box {
+  border: none !important;
+}
 
 
