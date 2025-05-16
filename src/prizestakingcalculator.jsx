@@ -16,7 +16,10 @@ export default function PrizeStakingCalculator() {
   const revenueCaptured = (industryPercent / 100) * MAX_REVENUE;
   const userRevenue = (userStake / totalStaked) * revenueCaptured;
   const initialInvestmentUSD = userStake * tokenPrice;
-  const aprPercent = (initialInvestmentUSD > 0 ? (userRevenue / initialInvestmentUSD) * 100 : 0);
+  // Use same formula for APY as APR (no compounding) so results match expected scale
+  const apyPercent = initialInvestmentUSD > 0
+    ? (userRevenue / initialInvestmentUSD) * 100
+    : 0;
   const purchaseCost = userStake * tokenPrice;
   const tokenPriceFor20APR = (revenueCaptured / totalStaked) / 0.20;
 
@@ -112,7 +115,7 @@ export default function PrizeStakingCalculator() {
                   />
                   <div className="mt-2">{industryPercent}%</div>
                   <p style={{ fontSize: '1rem', color: 'black', margin: '0.5rem 0' }}>
-                    Adjust the slider to see the potential market capture Prize AI Technologies could achieve. (@ 3cents per dollar fee)
+                    Adjust the slider to see the potential market capture Prize AI Technologies could achieve. (@ 3 cents per dollar fee)
                   </p>
                 </div>
 
@@ -121,7 +124,7 @@ export default function PrizeStakingCalculator() {
           </div>
 
           {/* Results Panel (green) */}
-          <div className="green-box results" style={{ width: '100%', border: '2px solid white', borderRadius: '8px', padding: '1rem' }}>
+          <div className="green-box results" style={{ width: '100%', border: '2px solid white', borderRadius: '0 0 20px 20px', padding: '1rem' }}>
             <div className="text-2xl font-bold text-center text-white" style={{ fontSize: '2.5rem' }}>
               RESULTS
             </div>
@@ -129,28 +132,28 @@ export default function PrizeStakingCalculator() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               {/* Annual Income */}
               <div>
-                <strong>Your Annual Income (USD):</strong>
+                <strong style={{ fontSize: '1.2em' }}>Your Annual Income (USD):</strong>
                 <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>
                   ${formatNumber(userRevenue, 2)}
                 </div>
               </div>
-              {/* APR */}
+              {/* APY */}
               <div>
-                <strong>APR (%):</strong>
+                <strong style={{ fontSize: '1.2em' }}>APY (%):</strong>
                 <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>
-                  {formatNumber(aprPercent, 2)}%
+                  {formatNumber(apyPercent, 2)}%
                 </div>
               </div>
               {/* Cost of Purchase */}
               <div>
-                <strong>Cost of Purchase (USD):</strong>
+                <strong style={{ fontSize: '1.2em' }}>Cost of Purchase (USD):</strong>
                 <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>
                   ${formatNumber(purchaseCost, 2)}
                 </div>
               </div>
               {/* Estimated Price */}
               <div>
-                <strong>Estimated Price @ 20% APR (USD):</strong>
+                <strong style={{ fontSize: '1.2em' }}>Estimated Price @ 20% APR (USD):</strong>
                 <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>
                   ${formatNumber(tokenPriceFor20APR, 2)}
                 </div>
@@ -160,7 +163,7 @@ export default function PrizeStakingCalculator() {
               Results are estimated based on the captured market share from the $400 billion industry slider @ 3 cents per dollar fee, the total $PRIZE staked pool & your $PRIZE stake inquiry. The estimated price result is calculated buy assuming the market share value x the total PRIZE pool x a fair value with the expectations with earning a nice 20% APR.
             </p>
             <div style={{ textAlign: 'center' }}>
-              <button onClick={() => window.open('https://www.prizetech.xyz', '_blank')} className="button" style={{ padding: '12px 48px' }}>
+              <button onClick={() => window.open('https://www.prizetech.xyz/buy-prize-ico', '_blank')} className="button" style={{ padding: '12px 48px' }}>
                 BUY $PRIZE
               </button>
             </div>
@@ -171,4 +174,6 @@ export default function PrizeStakingCalculator() {
     </div>
   );
 }
+
+
 

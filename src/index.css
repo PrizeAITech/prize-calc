@@ -97,7 +97,7 @@ body {
 /* Apply on: <div className="green-box results"> */
 .green-box.results {
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 0 0 20px 20px;
   border: 2px solid white;
   background-color: #57B42D;
   box-sizing: border-box;
@@ -167,6 +167,22 @@ body {
 /* Remove only the outer wrapper border */
 .yellow-box {
   border: none !important;
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(2deg); }
+  75%      { transform: rotate(-2deg); }
+}
+
+/* Apply wiggle constantly */
+.button {
+  display: inline-block;        /* so transforms work */
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+/* Pause wiggle on hover */
+.button:hover {
+  animation-play-state: paused;
 }
 
 
