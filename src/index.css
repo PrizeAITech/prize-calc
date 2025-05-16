@@ -10,8 +10,8 @@ body {
 /* Yellow Input Panel */
 .yellow-box {
   background-color: #FFF031;
-  border-radius: 20px;
   border: 3px solid white;
+  border-radius: 25px;
   padding: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
@@ -39,7 +39,7 @@ body {
   background-color: #57B42D;
   color: white;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 0;
   border: 3px solid white;
   box-shadow: none;
   display: flex;
@@ -64,7 +64,7 @@ body {
   margin-top: 8px;
 }
 
-/* Yellow-box helper text */
+/* Helper text inside yellow box */
 .yellow-box p {
   font-size: 1.2rem;
   color: black;
@@ -83,8 +83,9 @@ body {
   padding: 12px 48px;
   text-align: center;
 }
-.button:hover { background-color: #4682b4; }
-.button:focus { outline: none; }
+.button:hover {
+  animation-play-state: paused;
+}
 
 /* Responsive Overrides */
 @media (max-width: 768px) {
@@ -94,9 +95,9 @@ body {
 }
 
 /* Enhanced RESULTS PANEL Layout */
-/* Apply on: <div className="green-box results"> */
 .green-box.results {
-  padding: 20px;
+  position: relative;                /* enable absolute positioning of heading */
+  padding: 40px 20px 20px;          /* extra top padding for heading overlap */
   border-radius: 0 0 20px 20px;
   border: 2px solid white;
   background-color: #57B42D;
@@ -104,7 +105,20 @@ body {
   margin-bottom: 0;
 }
 
-/* 2×2 Metrics Grid with central divider */
+/* Center the 'RESULTS' heading across the top of the results panel */
+.green-box.results > div:first-child {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #57B42D;
+  padding: 0 3rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
 .green-box.results .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -112,7 +126,6 @@ body {
   position: relative;
 }
 
-/* Central vertical divider */
 .green-box.results .grid::before {
   content: "";
   position: absolute;
@@ -123,20 +136,17 @@ body {
   background-color: white;
 }
 
-/* Horizontal divider under top row cells */
 .green-box.results .grid > div:nth-child(1),
 .green-box.results .grid > div:nth-child(2) {
   border-bottom: 1px solid white;
   padding-bottom: 1rem;
 }
 
-/* Centered metric text */
 .green-box.results .grid > div {
   text-align: center;
   color: white;
 }
 
-/* Explanatory text below grid */
 .green-box.results p {
   color: black;
   text-align: center;
@@ -144,45 +154,22 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Remove extra border around wrapper */
 .calculator-wrapper {
   border: none !important;
   box-shadow: none !important;
 }
-/* Center the RESULTS heading in the top of the green box */
-.green-box.results > .results-heading,
-.green-box.results > div:first-child {
-  display: flex;          /* make the wrapper flex */
-  justify-content: center;/* center children horizontally */
-}
-.yellow-box {
-  /* remove or override the shadow */
-  box-shadow: none;
-}
-/* Remove any border/shadow on the wrapper only */
-.calculator-wrapper {
-  border: none !important;
-  box-shadow: none !important;
-}
-/* Remove only the outer wrapper border */
-.yellow-box {
-  border: none !important;
-}
+
 @keyframes wiggle {
   0%, 100% { transform: rotate(0deg); }
   25%      { transform: rotate(2deg); }
   75%      { transform: rotate(-2deg); }
 }
 
-/* Apply wiggle constantly */
 .button {
-  display: inline-block;        /* so transforms work */
+  display: inline-block;
   animation: wiggle 1s ease-in-out infinite;
 }
 
-/* Pause wiggle on hover */
 .button:hover {
   animation-play-state: paused;
 }
-
-
