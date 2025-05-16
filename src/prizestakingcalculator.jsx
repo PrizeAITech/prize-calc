@@ -139,7 +139,7 @@ export default function PrizeStakingCalculator() {
               </div>
               {/* APY */}
               <div>
-                <strong style={{ fontSize: '1.2em' }}>APY (%):</strong>
+                <strong style={{ fontSize: '1.2em' }}>APR (%):</strong>
                 <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>
                   {formatNumber(apyPercent, 2)}%
                 </div>
