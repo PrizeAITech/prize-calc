@@ -37,7 +37,7 @@ export default function PrizeStakingCalculator() {
       {/* Black panel unchanged */}
       <div className="black-box">
         <div className="heading-box">
-          <h1>$PRIZE Staking Calculator</h1>
+          <h1>STAKING CALCULATOR</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
