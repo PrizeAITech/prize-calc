@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 export default function PrizeStakingCalculator() {
   const [totalStaked, setTotalStaked] = useState(700_000_000);
   const [userStake, setUserStake] = useState(10000);
-  const [industryPercent, setIndustryPercent] = useState(10);
+  const [industryPercent, setIndustryPercent] = useState(2);
   const [tokenPrice, setTokenPrice] = useState(0.01);
 
   const INDUSTRY_TOTAL = 400_000_000_000;
@@ -32,23 +32,23 @@ export default function PrizeStakingCalculator() {
   return (
     <div
       className="calculator-wrapper"
-      style={{ margin: '0 auto', padding: '1.5rem', maxWidth: '1200px', fontFamily: 'Chelsea Market', color: 'black', boxSizing: 'border-box' }}
+      style={{ margin: '0 auto', padding: '1.5rem', maxWidth: '1200px', fontFamily: 'Arial, sans-seril', color: 'black', boxSizing: 'border-box' }}
     >
-      {/* Yellow panel unchanged */}
-      <div className="yellow-box">
+      {/* Black panel unchanged */}
+      <div className="black-box">
         <div className="heading-box">
           <h1>$PRIZE Staking Calculator</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-          {/* Input Panel (yellow) */}
-          <div className="green-box" style={{ backgroundColor: '#FFF031', boxShadow: 'none' }}>
-            <div style={{ color: '#1427B8', fontSize: '1.5rem' }}>
+          {/* Input Panel (Black) */}
+          <div className="green-box" style={{ backgroundColor: '#000000', boxShadow: 'none' }}>
+            <div style={{ color: '#1427B8', fontSize: '1.8rem' }}>
               <div className="space-y-8 pt-2">
 
                 {/* Total Staked */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                  <label className="font-semibold text-blue-600 mb-1">
+                  <label className="font-semibold mb-1" style={{ color: '#ffffff' }}>
                     Total $PRIZE Tokens Currently Staked
                   </label>
                   <Input
@@ -58,15 +58,16 @@ export default function PrizeStakingCalculator() {
                     className="text-black"
                     style={{ fontSize: '1.3rem', padding: '10px', borderRadius: '8px', width: '100%', boxSizing: 'border-box' }}
                   />
-                  <p style={{ fontSize: '1rem', color: 'black', margin: '0.5rem 0' }}>
-                    Add the current $PRIZE total amount for accurate calculations. This is found on top of the staking page.
+                  <p style={{ fontSize: '1rem', color: '#ffffff', margin: '0.5rem 0' }}>
+                    Add the current $PRIZE total staked amount for accurate calculations.
                   </p>
                 </div>
                 <hr className="border-white" />
 
                 {/* Your Stake */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                  <label className="font-semibold text-blue-600 mb-1">
+                  <label className="font-semibold mb-1" style={{ color: '#ffffff' }}>
+
                     Your $PRIZE Stake
                   </label>
                   <Input
@@ -76,7 +77,7 @@ export default function PrizeStakingCalculator() {
                     className="text-black"
                     style={{ fontSize: '1.3rem', padding: '10px', borderRadius: '8px', width: '100%', boxSizing: 'border-box' }}
                   />
-                  <p style={{ fontSize: '1rem', color: 'black', margin: '0.5rem 0' }}>
+                  <p style={{ fontSize: '1rem', color: '#ffffff', margin: '0.5rem 0' }}>
                     Add your inquiry amount.
                   </p>
                 </div>
@@ -84,7 +85,8 @@ export default function PrizeStakingCalculator() {
 
                 {/* Token Price */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                  <label className="font-semibold text-blue-600 mb-1">
+                  <label className="font-semibold mb-1" style={{ color: '#ffffff' }}>
+
                     $PRIZE Token Price (USD)
                   </label>
                   <Input
@@ -94,7 +96,7 @@ export default function PrizeStakingCalculator() {
                     className="text-black"
                     style={{ fontSize: '1.3rem', padding: '10px', borderRadius: '8px', width: '100%', boxSizing: 'border-box' }}
                   />
-                  <p style={{ fontSize: '1rem', color: 'black', margin: '0.5rem 0' }}>
+                  <p style={{ fontSize: '1rem', color: '#ffffff', margin: '0.5rem 0' }}>
                     Add the current price of $PRIZE.
                   </p>
                 </div>
@@ -102,19 +104,20 @@ export default function PrizeStakingCalculator() {
 
                 {/* Industry Revenue Capture */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                  <label className="font-semibold text-blue-600 mb-2">
+                  <label className="font-semibold mb-1" style={{ color: '#ffffff' }}>
+
                     Industry Revenue Capture (% of $400B)
                   </label>
                   <Slider
-                    min={2}
+                    min={1}
                     max={100}
                     step={1}
                     value={[industryPercent]}
                     onValueChange={(val) => setIndustryPercent(val[0])}
                     className="slider-field"
                   />
-                  <div className="mt-2">{industryPercent}%</div>
-                  <p style={{ fontSize: '1rem', color: 'black', margin: '0.5rem 0' }}>
+                  <div className="mt-2" style={{ color: '#ffffff' }}>{industryPercent}%</div>
+                  <p style={{ fontSize: '1rem', color: '#ffffff', margin: '0.5rem 0' }}>
                     Adjust the slider to see the potential market capture Prize AI Technologies could achieve. (@ 3 cents per dollar fee)
                   </p>
                 </div>
@@ -163,7 +166,7 @@ export default function PrizeStakingCalculator() {
               Results are estimated based on the captured market share from the $400 billion industry slider @ 3 cents per dollar fee, the total $PRIZE staked pool & your $PRIZE stake inquiry. The estimated price result is calculated buy assuming the market share value x the total PRIZE pool x a fair value with the expectations with earning a nice 20% APR.
             </p>
             <div style={{ textAlign: 'center' }}>
-              <button onClick={() => window.open('https://www.prizetech.xyz/buy-prize-ico', '_blank')} className="button" style={{ padding: '12px 48px' }}>
+              <button onClick={() => window.open('https://ico-dashboard.prizetech.xyz', '_blank')} className="button" style={{ padding: '12px 48px' }}>
                 BUY $PRIZE
               </button>
             </div>

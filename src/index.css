@@ -21,17 +21,17 @@ body {
   box-sizing: border-box;
 }
 
-/* Heading Box */
 .heading-box {
-  background-color: #454545;
+  background-color: #000000;
   padding: 0;
   text-align: center;
   font-size: 1.6rem;
-  color: white;
+  color: #0038FF;
   border-radius: 20px 20px 0 0;
   border: 3px solid white;
   width: 100%;
   box-sizing: border-box;
+  text-shadow: 2px 2px 0 white;
 }
 
 /* Standard Green Box */
@@ -64,7 +64,7 @@ body {
   margin-top: 8px;
 }
 
-/* Helper text inside yellow box */
+/* Helper text inside black box */
 .yellow-box p {
   font-size: 1.2rem;
   color: black;
@@ -73,9 +73,9 @@ body {
 
 /* Blue Button Styling */
 .button {
-  background-color: #1427B8;
+  background-color: #3462FA;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   cursor: pointer;
   border: 2px solid white;
   border-radius: 8px;
