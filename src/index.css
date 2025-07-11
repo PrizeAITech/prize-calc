@@ -113,8 +113,11 @@ body {
   .slider-field + div {
     font-size: 1rem !important;
   }
-}
 
+  .heading-box {
+    font-size: 1.1rem !important;
+  }
+}
 
 /* Enhanced RESULTS PANEL Layout */
 .green-box.results {
