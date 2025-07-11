@@ -122,7 +122,7 @@ body {
     font-size: 1rem !important;
   }
 
-  .green-box.results div {
+  .green-box.results div:not(:first-child) {
     font-size: 1rem !important;
   }
 
@@ -149,7 +149,7 @@ body {
   margin-bottom: .0rem;
   font-size: 2.5rem;
   font-weight: bold;
-  color: white;
+  color: #0038FF;
   text-align: center;
 }
 
