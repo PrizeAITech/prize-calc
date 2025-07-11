@@ -142,14 +142,11 @@ body {
   margin-bottom: 0;
 }
 
-/* Center the 'RESULTS' heading across the top of the results panel */
+/* Embed 'RESULTS' heading inside green box, top and centered */
 .green-box.results > div:first-child {
-  position: absolute;
+  position: relative;
   top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #57B42D;
-  padding: 0 3rem;
+  margin-bottom: .0rem;
   font-size: 2.5rem;
   font-weight: bold;
   color: white;
