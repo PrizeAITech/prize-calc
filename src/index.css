@@ -89,10 +89,32 @@ body {
 
 /* Responsive Overrides */
 @media (max-width: 768px) {
-  .yellow-box { padding: 10px 0; }
-  .green-box { padding: 15px; }
-  .button { width: 100%; padding: 15px 0; }
+  .yellow-box {
+    padding: 10px 0;
+  }
+
+  .green-box {
+    padding: 15px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  label {
+    font-size: 1rem !important;
+  }
+
+  .yellow-box p {
+    font-size: 0.9rem !important;
+  }
+
+  .slider-field + div {
+    font-size: 1rem !important;
+  }
 }
+
 
 /* Enhanced RESULTS PANEL Layout */
 .green-box.results {
