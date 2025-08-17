@@ -127,7 +127,7 @@ export default function PrizeStakingCalculator() {
           </div>
 
           {/* Results Panel (green) */}
-          <div className="green-box results" style={{ width: '100%', border: '2px solid white', borderRadius: '0 0 20px 20px', padding: '1rem' }}>
+          <div className="green-box results" style={{ width: '100%' }}>
             <div className="text-2xl font-bold text-center text-white" style={{ fontSize: '2.5rem' }}>
               RESULTS
             </div>
