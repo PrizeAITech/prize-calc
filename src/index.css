@@ -137,7 +137,7 @@ body {
   padding: 40px 20px 20px;          /* extra top padding for heading overlap */
   border-radius: 0 0 20px 20px;
   border: 1px solid white;
-  background-color: #3b2727;
+  background-color: #513786;
   box-sizing: border-box;
   margin-bottom: 0;
 }
@@ -208,5 +208,6 @@ body {
   animation-play-state: paused;
 
 }
+
 
 
