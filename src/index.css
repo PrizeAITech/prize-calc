@@ -73,7 +73,7 @@ body {
 
 /* Blue Button Styling */
 .button {
-  background-color: #3462FA;
+  background-color: #0038FF;
   color: white;
   font-size: 1.4rem;
   cursor: pointer;
@@ -208,6 +208,7 @@ body {
   animation-play-state: paused;
 
 }
+
 
 
 
