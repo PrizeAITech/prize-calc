@@ -42,7 +42,7 @@ body {
 .green-box {
   background: #0f172a;
   color: #e2e8f0;
-  padding: 24px;
+  padding: 28px;
   border-radius: 0;
   border: 1px solid #475569;
   box-shadow: none;
@@ -178,7 +178,7 @@ label {
 /* Results Panel */
 .green-box.results {
   position: relative;
-  padding: 16px;
+  padding: 20px;
   border-radius: 0 0 15px 15px;
   border: 1px solid rgba(71, 85, 105, 0.3);
   background: #0f172a;
@@ -197,7 +197,7 @@ label {
   text-align: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #6366f1 100%);
-  margin: -16px -16px 16px -16px;
+  margin: -20px -20px 20px -20px;
   padding: 12px 0;
   border-radius: 0;
   letter-spacing: 0.5px;
