@@ -181,7 +181,7 @@ label {
   position: relative;
   padding: 16px;
   border-radius: 0 0 15px 15px;
-  border: 1px solid #475569;
+  border: 1px solid rgba(71, 85, 105, 0.3);
   background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
   box-sizing: border-box;
   margin-bottom: 0;
