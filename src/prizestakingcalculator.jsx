@@ -163,7 +163,7 @@ export default function PrizeStakingCalculator() {
               </div>
             </div>
             <p style={{ fontSize: '0.9rem', color: '#d9d9d9', textAlign: 'center', marginBottom: '1rem' }}>
-              Results are estimated based on the captured market share from the $400 billion industry slider @ 3 cents per dollar fee, the total $PRIZE staked pool & your $PRIZE stake inquiry. The estimated price result is calculated buy assuming the market share value x the total PRIZE pool x a fair value with the expectations with earning a nice 20% APR.
+              Disclaimer: Results are estimates based on your inputs, the total $PRIZE staked, and potential market share from the $400B industry at a 3¢ per $1 fee. The projected token price assumes a fair valuation targeting a 20% APR.
             </p>
             <div style={{ textAlign: 'center' }}>
               <button onClick={() => window.open('https://ico-dashboard.prizetech.xyz', '_blank')} className="button" style={{ padding: '12px 48px' }}>
