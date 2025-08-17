@@ -10,7 +10,7 @@ body {
 /* Yellow Input Panel */
 .yellow-box {
   background-color: #3b2727;
-  border: 1px solid white;
+  border: 1px #a6a6a6;
   border-radius: 25px;
   padding: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -208,3 +208,4 @@ body {
   animation-play-state: paused;
 
 }
+
