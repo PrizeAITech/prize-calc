@@ -136,28 +136,28 @@ export default function PrizeStakingCalculator() {
               {/* Annual Income */}
               <div>
                 <strong style={{ fontSize: '1.2em' }}>Your Annual Income (USD):</strong>
-                <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>
+                <div style={{ color: '#63d5ff', fontSize: '1.5rem', fontWeight: 'bold' }}>
                   ${formatNumber(userRevenue, 2)}
                 </div>
               </div>
               {/* APY */}
               <div>
                 <strong style={{ fontSize: '1.2em' }}>APR (%):</strong>
-                <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>
+                <div style={{ color: '#63d5ff', fontSize: '1.5rem', fontWeight: 'bold' }}>
                   {formatNumber(apyPercent, 2)}%
                 </div>
               </div>
               {/* Cost of Purchase */}
               <div>
                 <strong style={{ fontSize: '1.2em' }}>Cost of Purchase (USD):</strong>
-                <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>
+                <div style={{ color: '#63d5ff', fontSize: '1.5rem', fontWeight: 'bold' }}>
                   ${formatNumber(purchaseCost, 2)}
                 </div>
               </div>
               {/* Estimated Price */}
               <div>
                 <strong style={{ fontSize: '1.2em' }}>Estimated Price @ 20% APR (USD):</strong>
-                <div style={{ color: '#1427B8', fontSize: '1.5rem', fontWeight: 'bold' }}>
+                <div style={{ color: '#63d5ff', fontSize: '1.5rem', fontWeight: 'bold' }}>
                   ${formatNumber(tokenPriceFor20APR, 2)}
                 </div>
               </div>
@@ -177,5 +177,6 @@ export default function PrizeStakingCalculator() {
     </div>
   );
 }
+
 
 
